@@ -87,7 +87,7 @@ def get_text_chunks(text):
 # Function to create a vector store using FAISS and Google Generative AI embeddings
 def get_vector_store(text_chunks):
     embeddings = GoogleGenerativeAIEmbeddings(
-        model = "models/embedding-001",
+        model = "models/z",
         GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
     )
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
